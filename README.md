@@ -44,8 +44,9 @@ policy workflow succeeds.
 
 1. Modify the reusable workflow without adding caller-controlled shell inputs.
 2. Run `python3 scripts/check_workflow_policy.py`.
-3. Open a pull request and require the `workflow-policy` check and code-owner
-   approval.
+3. Open a pull request and require the `workflow-policy` check, an up-to-date
+   branch, and resolved review threads. Direct pushes, force-pushes, and branch
+   deletion are blocked with no bypass actors.
 4. Merge, record the resulting commit SHA, and update callers to that exact SHA.
 5. Confirm an allowlisted caller succeeds and an unlisted test repository fails
    in `authorize caller` before relying on the new revision.
@@ -53,3 +54,9 @@ policy workflow succeeds.
 Cloud OIDC, registry credentials, protected environments, release approvals,
 deployment, and rollback stay in their owning repositories. They must never be
 added here.
+
+`CODEOWNERS` records current ownership. The personal-account repository cannot
+require independent approval while it has only one maintainer; enable required
+code-owner approval as soon as a second trusted maintainer or organization team
+exists. Until then, immutable downstream pins ensure no automation change is
+adopted by Jarvis without a separate reviewed Jarvis change.
