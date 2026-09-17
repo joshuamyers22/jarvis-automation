@@ -16,7 +16,7 @@ authentication.
 - filesystem, secret, dependency, and infrastructure scanning; and
 - clean GCP, AWS, and Azure image builds, smoke tests, SBOMs, and scans.
 
-Only `joshuamyers22/jarvis` is accepted by the workflow's runtime caller
+Only `qtrpartners/jarvis` is accepted by the workflow's runtime caller
 allowlist. All workflow and job token permissions are `contents: read`; the
 workflow declares no secrets, OIDC permission, environment, registry login, or
 publishing step. GitHub prevents a called workflow from elevating beyond its
