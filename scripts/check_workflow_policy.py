@@ -10,7 +10,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 WORKFLOW_DIR = ROOT / ".github" / "workflows"
 REUSABLE_WORKFLOW = WORKFLOW_DIR / "jarvis-ci.yml"
-ALLOWED_CALLERS = ("joshuamyers22/jarvis",)
+ALLOWED_CALLERS = ("qtrpartners/jarvis",)
 ACTION_REFERENCE = re.compile(r"^[ \t]*(?:-[ \t]+)?uses:[ \t]+([^\s#]+)", re.MULTILINE)
 WRITE_PERMISSION = re.compile(r"^[ \t]+[a-z-]+:[ \t]+write[ \t]*$", re.MULTILINE)
 SECRET_REFERENCE = re.compile(r"\$\{\{[ \t]*secrets\.")

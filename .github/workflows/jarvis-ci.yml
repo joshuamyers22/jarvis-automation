@@ -22,7 +22,7 @@ jobs:
         run: |
           set -euo pipefail
           case "$CALLER_REPOSITORY" in
-            joshuamyers22/jarvis) ;;
+            qtrpartners/jarvis) ;;
             *)
               echo "repository is not authorized to call this workflow: $CALLER_REPOSITORY" >&2
               exit 1
