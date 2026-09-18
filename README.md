@@ -31,7 +31,7 @@ permissions:
 
 jobs:
   validation:
-    uses: joshuamyers22/jarvis-automation/.github/workflows/jarvis-ci.yml@COMMIT_SHA
+    uses: qtrpartners/jarvis-automation/.github/workflows/jarvis-ci.yml@COMMIT_SHA
     permissions:
       contents: read
 ```
